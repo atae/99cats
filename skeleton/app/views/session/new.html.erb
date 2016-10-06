@@ -1,6 +1,6 @@
 <h1> Sign In</h1>
 <form  action="http://localhost:3000/session" method="post">
-  <input type="hidden" name="authenticity_token" value="<%=form_authenticity_token  %>">
+  <%= auth_token %>
 
   <label for="username"> Username</label>
   <input type="text" name="session[user_name]" value="" id = "username">
@@ -11,3 +11,9 @@
   <br>
   <button style="width:100px;height:30px;">Submit</button>
 </form>
+
+<% content_for :footer do %>
+  <p>
+    Log in here!
+  </p>
+<% end %>

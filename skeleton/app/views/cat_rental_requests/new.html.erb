@@ -3,7 +3,7 @@
 <%= render "shared/errors" %>
 
 <form action="<%= cat_rental_requests_url %>" method="post">
-  <input type="hidden" name="authenticity_token" value="<%=form_authenticity_token%>">
+<%= auth_token %>
   <label for="cat_rental_request_cat_id">Cat</label>
   <select name="cat_rental_request[cat_id]"
           id="cat_rental_request_cat_id">
@@ -36,3 +36,16 @@
 
   <input type="submit">
 </form>
+
+<% content_for :footer do %>
+  <p> I have a cat. </p>
+  <p>
+    I have a rental.
+  </p>
+  <p>
+    <strong>UH</strong>
+  </p>
+  <p>
+    Cat rental.
+  </p>
+<% end %>

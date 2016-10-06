@@ -9,7 +9,7 @@
 <% end %>
 <br>
 <form  action="http://localhost:3000/users" method="post">
-  <input type="hidden" name="authenticity_token" value= "<%= form_authenticity_token %>"
+  <%= auth_token %>
   <label for="username"> Username</label>
   <input type="text" name="user[user_name]" value="" id = "username">
 
@@ -19,3 +19,9 @@
   <br>
   <button style="width:100px;height:30px;">Create Account</button>
 </form>
+
+<%  content_for :footer do %>
+  <p>
+    Sign up here!
+  </p>
+<% end %>

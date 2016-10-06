@@ -8,3 +8,8 @@
 
 <%= link_to "Create cat", new_cat_url %>
 <%= link_to "Request Cat", new_cat_rental_request_url %>
+<% content_for :footer do %>
+   <p>
+     These are all the cats in our database. You can create and request a cat from this page.
+   </p>
+<% end %>
